@@ -130,3 +130,39 @@
   color: #721c24;
 }
 
+/* Additional Responsive Styles */
+@media (max-width: 768px) {
+  .auth-container {
+    max-width: 100%;
+  }
+  
+  .auth-content {
+    padding: 1.5rem;
+  }
+  
+  .auth-step h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-tabs {
+    flex-direction: column;
+  }
+  
+  .tab-btn {
+    padding: 0.8rem;
+  }
+  
+  .auth-content {
+    padding: 1rem;
+  }
+  
+  .form-group input {
+    padding: 0.6rem;
+  }
+  
+  .btn {
+    padding: 0.7rem;
+  }
+}

@@ -382,3 +382,137 @@ footer {
 .social-links a:hover {
     color: #ffa500;
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .hero h1 {
+      font-size: 3rem;
+    }
+    
+    .founder-cards {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    nav ul {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    nav ul li {
+      margin: 0.5rem;
+    }
+    
+    .hero {
+      height: 60vh;
+    }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .hero p {
+      font-size: 1rem;
+    }
+    
+    .stats {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .stat-item {
+      margin-bottom: 1rem;
+    }
+    
+    .donation-amounts {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .amount-btn {
+      flex: 1;
+      min-width: 45%;
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 0 1rem;
+    }
+    
+    .hero {
+      height: 50vh;
+    }
+    
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .cause h2, 
+    .founders h2,
+    .progress-section h2,
+    .cta h2 {
+      font-size: 1.8rem;
+    }
+    
+    .founder-card {
+      min-width: 100%;
+    }
+    
+    .footer-content {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .footer-links ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .footer-links ul li {
+      margin: 0.25rem 0;
+    }
+  }
+
+/* Mobile Navigation */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(26, 95, 122, 0.95);
+    padding: 1rem;
+    z-index: 1000;
+  }
+  
+  nav ul.show {
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+}

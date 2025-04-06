@@ -293,3 +293,66 @@
   }
 }
 
+/* Additional Responsive Styles */
+@media (max-width: 1024px) {
+  .stats-cards {
+    flex-wrap: wrap;
+  }
+  
+  .stat-card {
+    min-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .dashboard-header h1 {
+    margin-bottom: 0;
+  }
+  
+  .btn-secondary {
+    width: 100%;
+  }
+  
+  .dashboard-content {
+    flex-direction: column;
+  }
+  
+  .dashboard-sidebar {
+    max-width: 100%;
+  }
+  
+  .stat-card {
+    min-width: 100%;
+  }
+  
+  .donation-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-main {
+    padding: 1rem;
+  }
+  
+  .stats-cards {
+    gap: 1rem;
+  }
+  
+  .stat-card {
+    padding: 1rem;
+  }
+  
+  .recent-activity,
+  .donations-list {
+    padding: 1rem;
+  }
+}
