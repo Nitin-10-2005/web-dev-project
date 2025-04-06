@@ -1,0 +1,295 @@
+/* Dashboard Styles */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.btn-secondary {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #c0392b;
+}
+
+.dashboard-content {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.dashboard-sidebar {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-avatar {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1rem;
+  background-color: #1a5f7a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+}
+
+.user-profile h2 {
+  margin-bottom: 0.5rem;
+  color: #1a5f7a;
+}
+
+.user-profile p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.dashboard-nav {
+  list-style: none;
+}
+
+.dashboard-nav li {
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-nav a {
+  display: block;
+  padding: 0.8rem 1rem;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.dashboard-nav a:hover {
+  background-color: rgba(26, 95, 122, 0.1);
+}
+
+.dashboard-nav a.active {
+  background-color: #1a5f7a;
+  color: white;
+}
+
+.dashboard-main {
+  flex: 3;
+  min-width: 300px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-tab {
+  display: none;
+}
+
+.dashboard-tab.active {
+  display: block;
+}
+
+.dashboard-tab h2 {
+  color: #1a5f7a;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ffa500;
+}
+
+/* Stats Cards */
+.stats-cards {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 200px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(26, 95, 122, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  color: #1a5f7a;
+  font-size: 1.5rem;
+}
+
+.stat-info h3 {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+
+.stat-info p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a5f7a;
+}
+
+/* Activity List */
+.recent-activity,
+.donations-list {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.recent-activity h3 {
+  color: #1a5f7a;
+  margin-bottom: 1rem;
+}
+
+.activity-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-date {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+
+.activity-description {
+  font-weight: 500;
+}
+
+.donation-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.donation-item:last-child {
+  border-bottom: none;
+}
+
+.donation-info h4 {
+  margin-bottom: 0.3rem;
+}
+
+.donation-date {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.donation-amount {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a5f7a;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+/* Profile Form */
+#profile-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+#profile-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+#profile-form input,
+#profile-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#profile-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+#profile-form small {
+  display: block;
+  margin-top: 0.3rem;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+#profile-form button {
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+#profile-form button:hover {
+  background-color: #ff8c00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-content {
+    flex-direction: column;
+  }
+
+  .dashboard-sidebar {
+    max-width: 100%;
+  }
+
+  .stats-cards {
+    flex-direction: column;
+  }
+
+  .stat-card {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Nourish Hope: Hunger Relief Crowdfunding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Nourish Hope</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#cause">Our Cause</a></li>
+                        <li><a href="index.html#founders">Founders</a></li>
+                        <li><a href="index.html#donate">Donate</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Account Access</h1>
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <button class="tab-btn active" data-tab="login">Login</button>
+                    <button class="tab-btn" data-tab="register">Register</button>
+                </div>
+                
+                <div class="auth-content">
+                    <!-- Login Form -->
+                    <div class="tab-content active" id="login">
+                        <div id="login-step-1" class="auth-step active">
+                            <h2>Login with Email OTP</h2>
+                            <form id="login-form">
+                                <div class="form-group">
+                                    <label for="login-email">Email:</label>
+                                    <input type="email" id="login-email" name="email" required>
+                                </div>
+                                <button type="submit" class="btn">Send OTP</button>
+                            </form>
+                        </div>
+                        
+                        <div id="login-step-2" class="auth-step">
+                            <h2>Verify OTP</h2>
+                            <p>We've sent a one-time password to your email.</p>
+                            <form id="verify-login-otp-form">
+                                <div class="form-group">
+                                    <label for="login-otp">Enter OTP:</label>
+                                    <input type="text" id="login-otp" name="otp" required maxlength="6">
+                                </div>
+                                <button type="submit" class="btn">Verify & Login</button>
+                            </form>
+                            <p class="resend-link">Didn't receive the code? <a href="#" id="resend-login-otp">Resend OTP</a></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Register Form -->
+                    <div class="tab-content" id="register">
+                        <div id="register-step-1" class="auth-step active">
+                            <h2>Create an Account</h2>
+                            <form id="register-form">
+                                <div class="form-group">
+                                    <label for="register-name">Full Name:</label>
+                                    <input type="text" id="register-name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="register-email">Email:</label>
+                                    <input type="email" id="register-email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="register-phone">Phone (optional):</label>
+                                    <input type="tel" id="register-phone" name="phone">
+                                </div>
+                                <button type="submit" class="btn">Register & Send OTP</button>
+                            </form>
+                        </div>
+                        
+                        <div id="register-step-2" class="auth-step">
+                            <h2>Verify Your Email</h2>
+                            <p>We've sent a one-time password to your email.</p>
+                            <form id="verify-register-otp-form">
+                                <div class="form-group">
+                                    <label for="register-otp">Enter OTP:</label>
+                                    <input type="text" id="register-otp" name="otp" required maxlength="6">
+                                </div>
+                                <button type="submit" class="btn">Verify & Create Account</button>
+                            </form>
+                            <p class="resend-link">Didn't receive the code? <a href="#" id="resend-register-otp">Resend OTP</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Nourish Hope. All rights reserved.</p>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
+

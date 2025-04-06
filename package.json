@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "connect-mongo": "^5.1.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "mongoose": "^8.13.1",
+    "nodemailer": "^6.10.0",
+    "otp-generator": "^4.0.1",
+    "razorpay": "^2.9.6"
+  }
+}

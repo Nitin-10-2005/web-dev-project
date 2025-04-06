@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Nourish Hope: Hunger Relief Crowdfunding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Nourish Hope</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#cause">Our Cause</a></li>
+                        <li><a href="index.html#founders">Founders</a></li>
+                        <li><a href="index.html#donate">Donate</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>My Dashboard</h1>
+                <button id="logout-btn" class="btn-secondary">Logout</button>
+            </div>
+            
+            <div class="dashboard-content">
+                <div class="dashboard-sidebar">
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h2 id="user-name">Loading...</h2>
+                        <p id="user-email">Loading...</p>
+                    </div>
+                    
+                    <ul class="dashboard-nav">
+                        <li><a href="#" class="active" data-tab="overview">Overview</a></li>
+                        <li><a href="#" data-tab="donations">My Donations</a></li>
+                        <li><a href="#" data-tab="profile">Profile Settings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="dashboard-main">
+                    <!-- Overview Tab -->
+                    <div class="dashboard-tab active" id="overview">
+                        <h2>Overview</h2>
+                        <div class="stats-cards">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-hand-holding-heart"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Total Donations</h3>
+                                    <p id="total-donations">0</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-rupee-sign"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Amount Donated</h3>
+                                    <p id="total-amount">₹0</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Meals Provided</h3>
+                                    <p id="meals-provided">0</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="recent-activity">
+                            <h3>Recent Activity</h3>
+                            <div class="activity-list" id="recent-activities">
+                                <p class="empty-state">No recent activity to display.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Donations Tab -->
+                    <div class="dashboard-tab" id="donations">
+                        <h2>My Donations</h2>
+                        <div class="donations-list" id="donations-list">
+                            <p class="empty-state">No donations yet. <a href="index.html#donate">Make your first donation!</a></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Tab -->
+                    <div class="dashboard-tab" id="profile">
+                        <h2>Profile Settings</h2>
+                        <form id="profile-form">
+                            <div class="form-group">
+                                <label for="profile-name">Full Name:</label>
+                                <input type="text" id="profile-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="profile-email">Email:</label>
+                                <input type="email" id="profile-email" name="email" required disabled>
+                                <small>Email cannot be changed</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="profile-phone">Phone:</label>
+                                <input type="tel" id="profile-phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="profile-address">Address:</label>
+                                <textarea id="profile-address" name="address"></textarea>
+                            </div>
+                            <button type="submit" class="btn">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Nourish Hope. All rights reserved.</p>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
+

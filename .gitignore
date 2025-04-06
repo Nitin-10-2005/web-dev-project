@@ -1,0 +1,22 @@
+# node modules
+node_modules/
+
+# environment variables
+.env
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Vercel or render build output (if any is generated)
+.vercel
+.output
+dist/
+build/
+
+# Optional: IDE-specific (if you're using VSCode, JetBrains, etc.)
+.vscode/
+.idea/
