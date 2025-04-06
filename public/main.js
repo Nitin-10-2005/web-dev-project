@@ -184,7 +184,7 @@ function initDonationForm() {
 
     try {
       // Create Razorpay order via server
-      const orderResponse = await fetch("http://localhost:5000/create-order", {
+      const orderResponse = await fetch("/create-order", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -262,7 +262,7 @@ function initRazorpayPayment(order, amount, user) {
 // Verify payment with server
 async function verifyPaymentWithServer(response, amount, user) {
   try {
-    const verifyResponse = await fetch("http://localhost:5000/verify-payment", {
+    const verifyResponse = await fetch("/verify-payment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
