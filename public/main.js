@@ -345,3 +345,15 @@ function handlePaymentSuccess(response, amount, user) {
   window.location.href = "dashboard.html"
 }
 
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  const navMenu = document.querySelector('nav ul');
+  
+  if (mobileMenuToggle && navMenu) {
+    mobileMenuToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('show');
+    });
+  }
+});
+
