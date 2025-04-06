@@ -1,15 +1,13 @@
 {
     "version": 2,
     "builds": [
-      {
-        "src": "server.js",
-        "use": "@vercel/node"
-      }
+      { "src": "server.js", "use": "@vercel/node" }
     ],
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "server.js"
-      }
+      { "src": "/send-otp", "dest": "server.js" },
+      { "src": "/verify-otp", "dest": "server.js" },
+      { "src": "/create-order", "dest": "server.js" },
+      { "src": "/verify-payment", "dest": "server.js" },
+      { "src": "/(.*)", "dest": "server.js" }
     ]
   }

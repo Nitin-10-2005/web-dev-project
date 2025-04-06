@@ -11,25 +11,25 @@ const app = express()
 const PORT = process.env.PORT || 5000
 
 // Log environment variables (remove in production)
-console.log("Environment:", process.env.NODE_ENV)
-console.log("Razorpay Key ID:", process.env.RAZORPAY_KEY_ID)
+if (process.env.NODE_ENV !== "production") {
+  console.log("Environment:", process.env.NODE_ENV)
+  console.log("Razorpay Key ID:", process.env.RAZORPAY_KEY_ID)
+}
 
 // ✅ Middleware
 app.use(
   cors({
     // Allow requests from any origin in production
-    origin:
-      process.env.NODE_ENV === "production"
-        ? true
-        : ["http://127.0.0.1:3000", "http://localhost:5000", "http://localhost:3000"],
+    origin: true,
     methods: ["POST", "GET"],
     allowedHeaders: ["Content-Type"],
   }),
 )
 app.use(express.json())
 
-// Serve static files from the root directory instead of 'public'
-app.use(express.static(__dirname))
+// Serve static files from the public directory
+// This must come BEFORE the API routes
+app.use(express.static(path.join(__dirname, "public")))
 
 const otpStore = {} // Temporary storage for OTPs with expiration
 
@@ -78,12 +78,8 @@ async function generateAndSendOTP(email) {
   }
 }
 
-// 📌 Root route handler
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"))
-})
-
-// 📌 Route to Send OTP (Initial & Resend)
+// 📌 API Routes
+// Route to Send OTP (Initial & Resend)
 app.post("/send-otp", async (req, res) => {
   const { email } = req.body
   if (!email) return res.status(400).json({ error: "Email is required" })
@@ -238,16 +234,30 @@ async function sendDonationConfirmation(email, amount, paymentId) {
 }
 
 // Catch-all route to handle client-side routing
+// This must come AFTER all API routes
 app.get("*", (req, res) => {
-  // Check if the requested path is for an HTML file
-  if (req.path.endsWith(".html")) {
-    res.sendFile(path.join(__dirname, req.path))
+  // Check if the request is for a file with an extension
+  const fileExtension = path.extname(req.path);
+  
+  if (fileExtension) {
+    // If it's a file with extension, try to serve it from public
+    const filePath = path.join(__dirname, "public", req.path);
+    res.sendFile(filePath, (err) => {
+      if (err) {
+        // If file not found, fall back to index.html
+        res.sendFile(path.join(__dirname, "public", "index.html"));
+      }
+    });
   } else {
-    // Default to index.html for other routes
-    res.sendFile(path.join(__dirname, "index.html"))
+    // For routes without file extension, serve index.html
+    res.sendFile(path.join(__dirname, "public", "index.html"));
   }
 })
 
-// 🚀 Start Server
-app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`))
+// Start the server if running directly
+if (require.main === module) {
+  app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`))
+}
 
+// Export the Express API for Vercel
+module.exports = app
