@@ -348,11 +348,26 @@ function handlePaymentSuccess(response, amount, user) {
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
   const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-  const navMenu = document.querySelector('nav ul');
+  const nav = document.querySelector('nav');
   
-  if (mobileMenuToggle && navMenu) {
+  if (mobileMenuToggle && nav) {
     mobileMenuToggle.addEventListener('click', function() {
-      navMenu.classList.toggle('show');
+      nav.classList.toggle('show');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!nav.contains(event.target) && !mobileMenuToggle.contains(event.target) && nav.classList.contains('show')) {
+        nav.classList.remove('show');
+      }
+    });
+    
+    // Close menu when clicking a link
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        nav.classList.remove('show');
+      });
     });
   }
 });
