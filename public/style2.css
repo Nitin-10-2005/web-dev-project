@@ -328,9 +328,6 @@ footer {
       top: 50%;
       transform: translateY(-50%);
       z-index: 1001;
-      height: 4px;
-      background-color: #ffa500;
-      border-radius: 10px;   
     }
     
     nav {
