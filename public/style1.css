@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background-color: rgba(26, 95, 122, 0.9);
+    background-color: rgba(26, 122, 69, 0.9);
     padding: 1rem;
     position: sticky;
     top: 0;
@@ -208,7 +208,7 @@ nav ul li a:hover {
 
 .founders {
     padding: 4rem 0;
-    background-color: #1a5f7a;
+    background-color: rgba(26, 122, 69, 0.9);
     color: white;
 }
 
@@ -296,7 +296,7 @@ nav ul li a:hover {
 }
 
 .cta {
-    background-color: #1a5f7a;
+    background-color:rgba(26, 122, 69, 0.9);
     color: white;
     padding: 4rem 0;
     text-align: center;
@@ -343,7 +343,7 @@ nav ul li a:hover {
 }
 
 footer {
-    background-color: #333;
+    background-color: rgba(26, 122, 69, 0.9);;
     color: white;
     text-align: center;
     padding: 2rem 0;
@@ -510,7 +510,7 @@ footer {
       position: absolute;
       top: 100%;
       left: 0;
-      background-color: rgba(26, 95, 122, 0.95);
+      background-color: rgba(26, 122, 69, 0.9);
       padding: 0;
       max-height: 0;
       overflow: hidden;
