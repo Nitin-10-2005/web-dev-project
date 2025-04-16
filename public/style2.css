@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color:rgba(26, 122, 69, 0.9);
+    background-color: rgba(26, 95, 122, 0.9);
     padding: 1rem;
     position: sticky;
     top: 0;
@@ -67,7 +67,7 @@ main {
 }
 
 h1 {
-    color: rgba(26, 122, 69, 0.9);
+    color: #1a5f7a;
     margin-bottom: 2rem;
     font-size: 2.5rem;
     text-align: center;
@@ -136,7 +136,7 @@ button:hover {
 }
 
 .contact-info h2 {
-    color: rgba(26, 122, 69, 0.9);
+    color: #1a5f7a;
     margin-bottom: 1rem;
 }
 
@@ -149,7 +149,7 @@ button:hover {
 }
 
 .contact-info .social-links a {
-    color: rgba(26, 122, 69, 0.9);
+    color: #1a5f7a;
     font-size: 1.5rem;
     margin-right: 1rem;
     transition: color 0.3s ease;
@@ -167,7 +167,7 @@ button:hover {
 }
 
 footer {
-    background-color: rgba(26, 122, 69, 0.9);;
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 2rem 0;
@@ -335,7 +335,7 @@ footer {
       position: absolute;
       top: 100%;
       left: 0;
-      background-color:rgba(26, 122, 69, 0.9);
+      background-color: rgba(26, 95, 122, 0.95);
       padding: 0;
       max-height: 0;
       overflow: hidden;
@@ -345,7 +345,7 @@ footer {
     
     nav.show {
       max-height: 300px;
-      box-shadow: 0 4px 8px rgba(26, 122, 69, 0.9);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     
     nav ul {
