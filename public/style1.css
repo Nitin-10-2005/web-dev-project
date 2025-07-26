@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -125,6 +124,9 @@ nav ul li a:hover {
     border-radius: 5px;
     transition: background-color 0.3s ease;
     font-weight: bold;
+    /* FIX: Added border: none and cursor: pointer */
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
